@@ -1,8 +1,10 @@
 /* Объяви переменные a, b типа int и переменную s типа String.
 Сразу же в строке объявления присвой им любые разные значения. */
 
-public class Main {
+class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int a = 13;
+        int b = 24;
+        String c = "hoho";
     }
 }

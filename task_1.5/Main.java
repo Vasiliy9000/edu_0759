@@ -8,9 +8,19 @@ TF = (9 / 5) * TC + 32
 на вход подается значение 41.
 Пример вывода:
 105.8 */
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Температура в цельсиях?");
+
+        float a = sc.nextInt();
+        float b = a * 9/5 + 32;
+        System.out.println("А вот в фарингейтах!" + b );
+
        // Ваш код
     }
 }
