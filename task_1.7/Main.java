@@ -7,10 +7,16 @@
 Пример вывода:
 250000 */
 
-
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Ваш код
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Что там по метрам Д, Ш, В, в метрах?");
+        int a, b, c;
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        System.out.println(a*b*c*100);
     }
 }

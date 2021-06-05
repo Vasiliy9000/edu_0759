@@ -15,7 +15,13 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        int a = 7;
+        for (int b = 0; b < 9; b++ ) {
+            for (int c = 0; c < b; c++ ) {
+                System.out.print(a);
+            }
+        System.out.println();
+        }
     }
 }
+
