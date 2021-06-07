@@ -10,7 +10,15 @@
 
 public class Main {
     public static int min(int a, int b, int c) {
-        //напишите тут ваш код
+        int min = 0;
+        if (a <= b & a <= c) {
+            min = a;
+        } else if (b < a & c > b) {
+            min = b;
+        } else {
+            min = c;
+        }
+    return min;
     }
 
     public static void main(String[] args) {
