@@ -11,33 +11,33 @@
 •	Метод min(a, b) должен возвращать минимальное значение из чисел a, b.
 •	Метод min(a, b, c, d) должен использовать метод min(a, b)
 •	Метод min(a, b, c, d) должен возвращать минимальное значение из чисел a, b, c, d.
+
+ public static int min(int a, int b, int c, int d) {
+        //напишите тут ваш код
+    return (min(min(a,b),min(c,d)));
+    }
+
+    public static int min(int a, int b) {
+        //напишите тут ваш код
+        if (a<b)
+            return a;
+        else return b;
+    }
 */
 
 public class Main {
     public static int min(int a, int b, int c, int d) {
-        int min2;
-        if (a <= b & a <= c & a <= d) {
-            min2 = a;
-        } else if (b <= a & b <= c & b <= d) {
-            min2 = b;
-        } else if (c <= a & c <= b & c <= d) {
-            min2 = c;
-        } else {
-            min2 = d;
-        }
-        return min2;
+        return (min(min(a,b),min(c,d)));
     }
-
     public static int min(int a, int b) {
-        int min1;
-        if (a < b ) {
-            min1 = a;
+        if (a < b) {
+            return a;
         } else {
-            min1 = b;
+            return b;
         }
-        return min1;
     }
 
+    
     public static void main(String[] args) throws Exception {
         System.out.println(min(-20, -10));
         System.out.println(min(-40, -10, -30, 40));
