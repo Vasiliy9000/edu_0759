@@ -15,19 +15,67 @@
 
 public class Main {
     public static void main(String[] args) {
+        Cat kat1 = new Cat();
+        Cat kat2 = new Cat();
 
+        kat1.setAge(3);
+        kat1.setWeight(5);
+        kat1.setStrength(3);
+
+        kat2.setAge(2);
+        kat2.setWeight(2);
+        kat2.setStrength(8);
+
+
+        kat1.fight(kat2);
+        kat2.fight(kat1);
+        kat2.fight(kat2);
     }
 }
-
 class Cat {
     public int age;
     public int weight;
     public int strength;
 
+    public void setStrength(int name) { this.strength = name; }
+
+//    public int getStrength() { return strength; }
+
+    public void setAge(int age) { this.age = age; }
+
+//    public int getAge() { return age; }
+
+    public void setWeight(int weight) { this.weight = weight; }
+
+//    public int getWeight() { return weight; } int kat2 = 0;
+
     public Cat() {
+
     }
 
-    public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
+    public void fight(Cat anotherCat) {
+        int kat = 0;
+        int another = 0;
+
+        if (this.weight > anotherCat.weight) {
+            kat ++;
+        }  if (this.weight < anotherCat.weight) {
+            another ++;
+        }  if (this.strength > anotherCat.strength) {
+            kat++;
+        }  if (this.strength < anotherCat.strength) {
+            another++;
+        }  if (this.age > anotherCat.age) {
+            kat++;
+        }  if (this.age < anotherCat.age) {
+            another++;
+        }  if (kat < another) {
+            System.out.println("Приглашенный кот, оказался покрепче...");
+        }  else if (kat > another) {
+            System.out.println("Приглашенный кот, повержен!");
+        }  else { System.out.println("Кошачий паритет"); }
+
     }
 }
+
+
