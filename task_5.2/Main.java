@@ -13,7 +13,9 @@
 Абрамовичи */
 
 
+import java.util.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,23 +26,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Map<String, String> states = new HashMap<String, String>();
 
-        List<String> list = new ArrayList<>();
         while (true) {
+            System.out.println("Введите город ");
             String family = scanner.nextLine();
+            System.out.println("Введите семью ");
+            String city = scanner.nextLine();
             if (family.isEmpty()) {
+                System.out.println("В каком городе ищите? ");
+                String gor = scanner.next();
+                String first = states.get(gor);
+                System.out.println("Там живет " + first);
                 break;
             }
-
-            list.add(family);
-        }
-
-        // Read the house number
-        int houseNumber = scanner.nextInt();
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
+            states.put(family,city);
+            System.out.println(states);
         }
     }
 }

@@ -9,17 +9,21 @@
 •	Дополнительные классы или интерфейсы создавать нельзя.
 */
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args){
     }
 }
 
 interface Animal {
-    Color getColor();
+
+     Color getColor();
 }
-    
-class Fox {
+
+abstract class Fox implements Animal{
     public String getName() {
         return "Fox";
     }
+
 }
